@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Retargeting After Third-Party Cookies: A Practical Guide — Netscope</title>
+<meta name="description" content="First-party data, hashed identifiers, clean rooms. A field guide for retail marketers who still need to reach shoppers off-site in a cookieless world." />
+<meta name="theme-color" content="#ffffff" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo" aria-label="Netscope">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span>Netscope</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../services.html">Services</a>
+      <a href="../solutions.html">Solutions</a>
+      <a href="../case-studies.html">Case studies</a>
+      <a href="../resources.html" class="active">Resources</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="../contact.html" class="btn btn-primary btn-arrow">Partner with us</a>
+      <button class="nav-toggle" aria-label="Open menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="../services.html">Services</a>
+  <a href="../solutions.html">Solutions</a>
+  <a href="../case-studies.html">Case studies</a>
+  <a href="../resources.html">Resources</a>
+  <a href="../contact.html">Contact</a>
+  <a href="../contact.html" class="btn btn-primary">Partner with us</a>
+</div>
+
+<article class="article">
+  <div class="container article-head">
+    <span class="eyebrow reveal">Identity · 15 min read</span>
+    <h1 class="reveal mt-2">Retargeting after third‑party cookies: <span class="grad-text">a practical guide.</span></h1>
+    <p class="lead reveal">The cookie‑deprecation news cycle has been running since 2020 and the actual transition has been a slow bleed, not a cliff. What's changed is that the practitioners who took the long warning seriously now have durable programmes, and the ones who didn't are scrambling. Here's what actually works.</p>
+    <div class="article-meta reveal"><span>Published February 6, 2026</span><span>·</span><span>By the Netscope Campaign Team</span></div>
+  </div>
+
+  <div class="container article-body">
+    <p>Third‑party cookies have been dead on Safari since ITP 2.1 in 2019. Firefox's Enhanced Tracking Protection has had them off by default since 2019 as well. iOS in‑app identifiers have been effectively opt‑in since ATT in 2021. On Chrome, the Privacy Sandbox transition has moved in slow motion, but it is moving, and the writing has been on the wall for five years.</p>
+
+    <p>For retargeting specifically, the loss of third‑party cookies means you can't rely on a cross‑site tracker to recognise the shopper who abandoned your cart last night when they visit a publisher this morning. That's the part that used to be automatic, and it is no longer automatic.</p>
+
+    <p>Everything else about retargeting still works fine — you just need to rebuild the identity layer using signals the browsers and operating systems haven't turned off.</p>
+
+    <h2>The new identity stack, in order of importance</h2>
+
+    <h3>1. First‑party data on your own domain</h3>
+    <p>Nothing in the last five years has changed about what happens on your own site. Your first‑party cookies, your pixel, your logged‑in user data — all of it works. If a shopper views a product on your site, you can recognise them on your site. The cookie that got turned off is the one that lets a third‑party DSP recognise them on <em>someone else's</em> site without a separate identifier.</p>
+
+    <p>The implication: invest heavily in capturing first‑party signal. Email at checkout, push opt‑ins, account creation incentives, newsletter sign‑up. This is your audience now. It is addressable across email, push and through hashed‑email identifiers across programmatic supply.</p>
+
+    <h3>2. Hashed‑email identifiers (UID 2.0, RampID, ID5)</h3>
+    <p>When a shopper gives you their email, you can hash it with SHA‑256 and use that hash as a cross‑site identifier through the major identity frameworks. UID 2.0 (an open standard maintained by The Trade Desk) and RampID (LiveRamp) are the two that have meaningful scale in 2026. Both work the same way from a retailer's perspective: you hash the email on your server, push the hash into the DSP, and if the publisher has also ingested a hash of the same email through their own logged‑in audience, a match is made.</p>
+
+    <p>Addressability via hashed identifiers covers roughly 50–65% of programmatic impressions in 2026, up from single digits three years ago. It's not everything, but it's a lot.</p>
+
+    <h3>3. Web push subscriptions</h3>
+    <p>The quietest win in the whole identity reshuffle. Push subscriptions are first‑party, directly addressable, cookieless by design and don't require an email. A shopper can opt in anonymously, and you can still retarget them.</p>
+
+    <p>For any retailer that ran a real push programme in 2022–2024, this is now one of the most valuable assets in the marketing stack. For retailers that didn't — the list can still be built from here, it just takes a few quarters.</p>
+
+    <h3>4. Server‑side conversion APIs</h3>
+    <p>Conversion signals from your server to Meta's CAPI, Google's Enhanced Conversions, TikTok's Events API. These let you send purchase events directly from your commerce backend, bypassing browser‑side tracking restrictions. Signal quality for conversion‑optimised campaigns improves meaningfully — 15–25% in most retailer implementations we've seen — and it's a one‑time engineering build.</p>
+
+    <h3>5. Publisher first‑party audiences</h3>
+    <p>Large publishers with logged‑in users — the New York Times, the Guardian, Hearst titles, Condé Nast — sell targeting against their own first‑party audience signals via PMPs. You're no longer targeting "women aged 25–44 interested in fashion" as a DMP segment; you're buying an impression against a NYT user who the NYT says is in their "style and fashion" segment, with attribution back to you via hashed email match.</p>
+
+    <h3>6. Privacy Sandbox (cautiously)</h3>
+    <p>Chrome's Privacy Sandbox APIs — Topics, Protected Audiences — are functional and increasingly being adopted, but the addressable signal is noisier than the identifier stack above and the reporting latency is higher. Worth running test budgets against, not worth leading your programme with in 2026.</p>
+
+    <h2>What happens on Safari and iOS</h2>
+    <p>Safari has ITP, which aggressively restricts third‑party tracking and limits first‑party cookie lifetime to 7 days on scripted sets. Apple's ATT has turned off IDFA for the ~80% of users who opted out.</p>
+
+    <p>The practical implication: on Safari desktop and iOS web, you rely heavily on hashed‑email identifiers (which survive) and push subscriptions (which survive for users who added your site to their home screen). On iOS in‑app, you rely on SKAdNetwork and AdAttributionKit for conversion measurement and accept that impression‑level targeting is limited.</p>
+
+    <p>It's not the ideal world, but it is the working world, and the retailers who've built a push list and an email list don't feel the pinch as sharply as the ones who haven't.</p>
+
+    <h2>Clean rooms — when they're worth it</h2>
+    <p>Clean rooms (Google Ads Data Hub, Amazon Marketing Cloud, LiveRamp's offering, Snowflake‑based solutions) let you combine first‑party data with a partner's first‑party data in a controlled environment, with no PII exiting either party. For very large retailers with real data science capacity, they're powerful — especially the retail media clean rooms that let you collaborate with brands you sell.</p>
+
+    <p>For a retailer doing less than about $50M in online revenue, they're usually overkill. The cost of setting one up and the talent to operate it outweigh the incremental signal over a well‑run hashed‑email stack.</p>
+
+    <h2>A pragmatic 90‑day plan</h2>
+    <p>If you're starting from a legacy setup and want to modernise, this is roughly the order we'd put it in:</p>
+    <ol>
+      <li><strong>Weeks 1–2:</strong> audit where you're still dependent on third‑party cookies. Any pixel, any DMP segment, any remarketing audience that's cookie‑based is on borrowed time.</li>
+      <li><strong>Weeks 2–4:</strong> ship server‑side conversion APIs for Meta, Google and any other paid channel running more than 10% of your spend.</li>
+      <li><strong>Weeks 4–8:</strong> implement UID 2.0 on the site and in your DSP of choice, push every logged‑in session's hashed email into the graph.</li>
+      <li><strong>Weeks 6–12:</strong> launch or relaunch web push with a properly designed soft opt‑in.</li>
+      <li><strong>Weeks 8–12:</strong> begin PMP deals with two or three premium publishers relevant to your category.</li>
+      <li><strong>Ongoing:</strong> measure against attention metrics, not viewability, and refresh MFA exclusion lists monthly.</li>
+    </ol>
+
+    <p>Retailers who do this end up with a retargeting programme that's more durable than the one they had in 2019 — because it runs on data and signals you own, not on tracking infrastructure you rent from browsers that are trying to deprecate it.</p>
+
+    <h2>The uncomfortable truth</h2>
+    <p>The part of the industry that's still pretending third‑party cookies "might come back" is the same part that outsourced its identity strategy to ad tech vendors a decade ago and never rebuilt it. They'll keep losing ground to the retailers who took the warning seriously.</p>
+
+    <p>The good news: it's not late. Two quarters of disciplined work gets a mid‑sized retailer from "vulnerable" to "durable." The hardest part is actually doing it.</p>
+
+    <div class="article-cta reveal">
+      <div>
+        <h3>Want an identity audit on your current stack?</h3>
+        <p>Share your tag config and paid channel list. We'll tell you which signals are at risk, which are durable, and what to prioritise.</p>
+      </div>
+      <a href="../contact.html" class="btn btn-primary btn-arrow">Partner with us</a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <div>© <span data-year></span> Netscope · Performance retargeting partner</div>
+      <div style="display:flex;gap:18px">
+        <a href="../resources.html">More articles</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

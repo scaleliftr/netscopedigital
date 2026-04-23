@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Web Push Notifications: The Underrated Retargeting Channel — Netscope</title>
+<meta name="description" content="Push has double-digit open rates, no cookies and no sender reputation — and most brands still ignore it. How a modern retargeting programme uses web push." />
+<meta name="theme-color" content="#ffffff" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo" aria-label="Netscope">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span>Netscope</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../services.html">Services</a>
+      <a href="../solutions.html">Solutions</a>
+      <a href="../case-studies.html">Case studies</a>
+      <a href="../resources.html" class="active">Resources</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="../contact.html" class="btn btn-primary btn-arrow">Partner with us</a>
+      <button class="nav-toggle" aria-label="Open menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="../services.html">Services</a>
+  <a href="../solutions.html">Solutions</a>
+  <a href="../case-studies.html">Case studies</a>
+  <a href="../resources.html">Resources</a>
+  <a href="../contact.html">Contact</a>
+  <a href="../contact.html" class="btn btn-primary">Partner with us</a>
+</div>
+
+<article class="article">
+  <div class="container article-head">
+    <span class="eyebrow reveal">Channel guide · 10 min read</span>
+    <h1 class="reveal mt-2">Web push notifications: <span class="grad-text">the underrated retargeting channel.</span></h1>
+    <p class="lead reveal">Email open rates are sinking under the weight of Gmail's promotions tab. Display CTRs are measured in fractions of a percent. And yet there's a retargeting surface that regularly delivers 6–9% open rates, needs no cookies, and almost nobody at a mid‑market retailer is running it properly.</p>
+    <div class="article-meta reveal"><span>Published March 26, 2026</span><span>·</span><span>By the Netscope Campaign Team</span></div>
+  </div>
+
+  <div class="container article-body">
+    <p>Web push is the notification that arrives on a desktop or Android device from a site the user has opted into — the same surface a native app would use, delivered over the Web Push Protocol through the browser. No app install, no App Store review, no email address required.</p>
+
+    <p>It's been shipping in every major desktop browser since around 2016, landed on Android Chrome a year later, and still nobody at the average retailer treats it as a primary retargeting channel. Most programmes we audit are either not running it at all, or running a generic "come back and shop" blast once a week from a $29/month SaaS plug‑in. Both approaches leave a lot on the table.</p>
+
+    <h2>Why push matters now, specifically</h2>
+    <p>Three forces are pushing push from "nice to have" to "necessary":</p>
+
+    <ol>
+      <li><strong>Cookie deprecation.</strong> Third‑party cookies are gone on Safari and Firefox, restricted on iOS, and on borrowed time in Chrome. Push subscriptions are first‑party by design — you own the list, you don't need a pixel to address it.</li>
+      <li><strong>Email deliverability.</strong> Gmail's 2024 bulk sender rules and the rise of the promotions tab mean even a flawless email programme sees 25–30% of messages never get opened. Push doesn't route through anyone else's inbox.</li>
+      <li><strong>Attention scarcity.</strong> A push lands on the lock screen or the corner of the desktop. For 2–4 seconds, it competes with nothing.</li>
+    </ol>
+
+    <h2>What the subscription prompt actually does</h2>
+    <p>Most push programmes live or die at the opt‑in prompt. The default Chrome dialogue — "netscope.com wants to show notifications" — converts at 1–3%, because it asks for a permission the user has no context for.</p>
+
+    <p>A well‑designed soft opt‑in, shown on the second or third session, tied to a specific benefit ("Get notified when the item you just viewed goes back in stock"), converts at 12–20% on desktop and higher on Android. The difference between those two implementations is usually an order of magnitude of your eventual push audience size. Get this wrong and nothing else you do will matter.</p>
+
+    <p>A few rules we hold firm on:</p>
+    <ul>
+      <li>Never fire the prompt on the first page a new visitor sees.</li>
+      <li>Always use a two‑step prompt — a custom UI first, the native browser permission only after the user has said yes to the custom.</li>
+      <li>Tie the ask to a concrete value: stock alerts, price drops, order status. Not "news and updates."</li>
+      <li>Never re‑prompt a user who has dismissed. It annoys them and the browsers are increasingly aggressive about punishing sites that do.</li>
+    </ul>
+
+    <h2>The four plays that actually work</h2>
+
+    <h3>1. The abandonment push</h3>
+    <p>Send within 15 minutes of abandonment, product‑specific, with the product image as the notification image. Don't offer a discount on the first push — that trains the behaviour. Open rates on this should sit around 8%. Click‑through to conversion should be in the 30–40% range on clicks.</p>
+
+    <h3>2. The restock trigger</h3>
+    <p>Connect the push tool to your stock feed. When an item a subscriber viewed comes back into stock in their size, fire a push. These convert obscenely well — we routinely see 6–10% of sends convert to a sale, because the shopper is getting exactly the information they wanted, at the moment the information became true.</p>
+
+    <h3>3. The price drop</h3>
+    <p>Similar mechanic: a subscriber viewed an item, the price later drops below the price they saw. Push. The click‑to‑conversion rate on these is often higher than your on‑site conversion rate.</p>
+
+    <h3>4. The order and delivery push</h3>
+    <p>Not retargeting strictly, but push is the best channel in your stack for order confirmations, shipping updates and "your parcel is arriving today." The reason matters: these messages drive a second session and a second shopping opportunity, and they re‑engage the permission so that your future commercial pushes don't feel out of context.</p>
+
+    <h2>Frequency, fatigue and unsubscribes</h2>
+    <p>Push is low‑friction to send, which is exactly why most brands destroy their list within six months. The usable cap is lower than people think — 2 to 3 messages per subscriber per week, weighted toward triggered rather than broadcast. Pure broadcast blasts at 4+ per week will degrade open rates and drive opt‑outs at a rate that compounds.</p>
+
+    <p>Watch three metrics weekly: opt‑out rate per send (should be under 0.3%), open rate trend (should be flat or rising), and share of sends that are triggered vs broadcast (should tilt toward triggered over time).</p>
+
+    <h2>What iOS changed (and didn't)</h2>
+    <p>Web push shipped on iOS Safari in early 2023, but only for sites the user has added to the home screen. For most of our retail clients that means iOS push reach is a fraction of Android and desktop — typically 5–8% of the opt‑in base.</p>
+
+    <p>That's fine. Push on iOS works perfectly well for the subscribers you have there, and the rest of your iOS traffic can be reached through display, email and in‑app environments. Don't let iOS gaps talk you out of running push everywhere else.</p>
+
+    <h2>Where most programmes fail</h2>
+    <p>The pattern is almost always the same. The retailer signs up for a self‑serve push tool, imports a template, runs weekly broadcasts for three months, watches open rates halve, decides "push doesn't work for us" and shuts it down.</p>
+
+    <p>The problem isn't push. The problem is that push is a channel that rewards operational discipline — segmentation, triggering, creative rotation, list hygiene. It's the same reason SMS programmes fail in the same pattern for the same reasons.</p>
+
+    <p>If you don't have the in‑house operations to run push properly, the CPA model makes a lot of sense: the partner carries the operational load, you see the recovered revenue, and the fee is deducted against sales that would not otherwise have happened.</p>
+
+    <div class="article-cta reveal">
+      <div>
+        <h3>Want to see what push could do on your traffic?</h3>
+        <p>Give us your monthly sessions and current email recovery numbers. We'll project the opt‑in size and recovered revenue from a properly run push programme.</p>
+      </div>
+      <a href="../contact.html" class="btn btn-primary btn-arrow">Partner with us</a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <div>© <span data-year></span> Netscope · Performance retargeting partner</div>
+      <div style="display:flex;gap:18px">
+        <a href="../resources.html">More articles</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
